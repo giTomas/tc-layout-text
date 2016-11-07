@@ -1,0 +1,111 @@
+//.varianta
+section,
+.c-article,
+.c-article__header,
+.c-article__header--frosting-glass,
+.c-article__header--frosting-glass:after
+  overflow: hidden
+
+.c-article
+  margin-bottom: 50vh
+
+.c-article__header,
+  //1. varianta background img v kontajneri nie je potrebny
+  // .c-article__header--frosting-glass
+  background-image: url('images/background/bg-standart.jpeg')
+  background-attachment: fixed
+  background-size: cover
+  margin-bottom: $vertical-rhytm
+
+.c-article__header
+  height: 85vh
+  display: flex
+
+.c-article__header--frosting-glass
+  height: 35vh
+  width: 100%
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  align-content: center
+  margin-top: auto
+
+  //1.varianta
+  background-color: rgba(white, 0.7)
+  // 2.varianta
+  background-color: white
+  position: relative
+  z-index: 999
+  &:after
+    background-image: url('images/background/bg-standart.jpeg')
+    background-attachment: fixed
+    background-size: cover
+    display: block
+    z-index: -1
+    filter: blur(4px)
+    margin: -3px 0 -10px
+    content: ''
+    width: calc(100% + 10px)
+    height: calc(100% + 6px)
+    // height: 100%
+    position: absolute
+    top: 0
+    left: 0
+    opacity: 0.4
+  @media(max-width: 600px)
+    height: 60vh
+
+.c-article__author,
+.c-article__title
+  width: 960px
+  margin: 0 $vertical-rhytm
+  @media(max-width: 400px)
+    margin: 0 $vertical-rhytm/2
+
+.c-article__author
+  font-size: $font-size-large-2
+
+
+.c-article__title
+  font-size: $font-size-large-4
+  font-weight: bold
+
+//2.varianta
+.c-article__title,
+.c-article__author
+  position: relative
+  z-index: 999
+
+.c-article__section
+  // golden ratio 960 * 0.618
+  max-width: 593.28px
+  margin: 0 0 0 42%
+  @media(max-width: 593.28px)
+    padding: 0 $vertical-rhytm
+  @media(max-width: 400px)
+    padding: 0 $vertical-rhytm/2
+
+.c-article__section--multimedia
+  max-width: 960px
+  margin: 0 auto
+  padding-bottom: $vertical-rhytm/2
+  @media(max-width: 959px)
+    max-width: 593.28px
+    margin: 0 auto
+
+.c-article
+.c-article__container
+
+.c-article__figure
+  cursor: zoom-in
+  @media(max-width: 959px)
+    padding-bottom: $vertical-rhytm
+
+.c-article__caption
+  padding-top: $vertical-rhytm / 6
+  color: $color-text-light
+  font-size: $font-size-mini
+  letter-spacing: 0.006em
+  font-family: 'Oswald', sans-serif
+
+.c-article__figcaption
