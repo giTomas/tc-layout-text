@@ -1,7 +1,14 @@
 .l-flex-row
-    display: flex
-    @media(max-width: 959px)
-      flex-wrap: wrap
+  display: flex
+  @media(max-width: 959px)
+    flex-wrap: wrap
+
+.l-flex-row-e
+  // display: flex
+  width: 593.28px
+  margin-left: auto
+  @media(max-width: 959px)
+    flex-wrap: wrap
 
 .l-1-2
   width: 50%
@@ -17,7 +24,41 @@
     padding-left: 0
 
 .l-g-1-2
-  width: 61.8%
+  // width: 61.8%
+  width: 593.28px
+  float: left
+  @media(max-width: 959px)
+    width: 100%
 
 .l-g-2-2
   width: 38.19%
+  max-width: 593.28px
+  // float: right
+  @media(max-width: 959px)
+    width: 100%
+
+.l-g-2-2-e
+  // width: 38.19%
+  max-width: 593.28px
+  // float: right
+  @media(max-width: 959px)
+    width: 100%
+
+.l-g-1-2-e
+  // width: 61.8%
+  margin-left: -366.624px
+  margin-right: $vertical-rhytm / 2
+  margin-bottom: $vertical-rhytm / 3.5
+  width: 593.28px
+  float: left
+  @media(max-width: 959px)
+    width: 100%
+
+.c-article__caption-abs
+  padding-top: $vertical-rhytm / 6
+  color: $color-text-light
+  font-size: $font-size-mini
+  letter-spacing: 0.006em
+  font-family: 'Oswald', sans-serif
+  position: absolute
+  max-width: 366.624px
