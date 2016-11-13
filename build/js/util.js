@@ -62,8 +62,9 @@ function findData(arr, prop, data) {
 // BEAWARE probably if array contains more identical properties it will return array
 // traverse whole array callback is executed for every item in array
 // IE not support
-function findValue(arr, _ref) {
-  var _ref$prop = _ref.prop,
+function findValue(_ref) {
+  var arr = _ref.arr,
+      _ref$prop = _ref.prop,
       prop = _ref$prop === undefined ? 'id' : _ref$prop,
       data = _ref.data;
 

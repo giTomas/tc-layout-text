@@ -1,14 +1,29 @@
-.l-flex-row
-  display: flex
-  @media(max-width: 959px)
-    flex-wrap: wrap
+//LAYOUT*
+//*******
 
-.l-flex-row-e
-  // display: flex
-  width: 593.28px
-  margin-left: auto
-  @media(max-width: 959px)
-    flex-wrap: wrap
+//Flex*
+//*****
+.l
+  &-flex
+    display: flex
+
+  &-f-v-center
+    align-items: center
+
+  &-f-opposite
+    justify-content: space-between
+
+  &-flex-row
+    display: flex
+    @media(max-width: 959px)
+      flex-wrap: wrap
+
+  &-flex-row-e
+    // display: flex
+    width: 593.28px
+    margin-left: auto
+    @media(max-width: 959px)
+      flex-wrap: wrap
 
 .l-1-2
   width: 50%
@@ -37,19 +52,28 @@
   @media(max-width: 959px)
     width: 100%
 
+.l-container
+  width: calc(960px + #{$padding-container} * 2)
+  // max-width: calc(60rem + #{$padding-container})
+  margin: 0 auto
+  padding: 0 $padding-container
+  // @media(max-width: 400px)
+    margin: 0 $vertical-rhytm/2
+
 .l-g-2-2-e
   // width: 38.19%
   max-width: 593.28px
+  // max-width: 100%
   // float: right
   @media(max-width: 959px)
     width: 100%
 
 .l-g-1-2-e
   // width: 61.8%
-  margin-left: -366.624px
-  margin-right: $vertical-rhytm / 2
-  margin-bottom: $vertical-rhytm / 3.5
-  width: 593.28px
+  margin-left: -366.62px
+  margin-right: $vertical-rhytm
+  // margin-bottom: $vertical-rhytm / 5
+  width: calc(593.28px - #{vertical-rhytm / 2})
   float: left
   @media(max-width: 959px)
     width: 100%
@@ -62,3 +86,8 @@
   font-family: 'Oswald', sans-serif
   position: absolute
   max-width: 366.624px
+
+.c-article__figure-e
+  cursor: zoom-in
+  @media(max-width: 959px)
+    padding-bottom: $vertical-rhytm

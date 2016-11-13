@@ -9,28 +9,42 @@
     <link rel="stylesheet" href="main.css">
   </head>
   <body>
-    <header class="c-page__header"></header>
+    <header>
+      <div class="c-page__header-background"></div>
+      <div class="c-page__header">
+        <div class="l-container l-flex l-f-opposite">
+          <div class="c-page__title">Terra Carphatica</div>
+          <nav class="c-page__nav l-flex l-f-v-center">
+            <ul class="l-flex">
+              <li><a class="c-page__link" href="/">Úvod</a></li>
+              <li><a class="c-page__link" href="/">Stanovy</a></li>
+              <li><a class="c-page__link" href="/">Kontakt</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
     <article class="c-article">
       <header class="c-article__header">
         <div class="c-article__header--frosting-glass">
-          <div class="c-article__hg">
+          <div class="l-container c-article__hgroup">
             <h1 class="c-article__title">Názov článku</h1>
             <h2 class="c-article__author">Maroš Ondrejka</h2>
           </div>
         </div>
       </header>
-      <div class="c-article__body">
+      <div class="l-container">
         <section class="c-article__section">
           <p class="c-text--first">In sanctus qualisque delicatissimi eam, pro ei graeco scripta assentior, ut qui modo illum. Unum dolorum consulatu no vim, est aliquip phaedrum no. Aeque aperiam cu nec, quem facilisi eum et, quodsi legendos disputando et eam. Cum an fabulas adolescens, ubique delectus has an, vim et numquam ocurreret. Pri ex sonet temporibus, persius verterem phaedrum nam ea, in phaedrum dissentias honestatis vim. Saepe facilisis elaboraret id qui, ei quod ridens his. Eu eum inimicus expetenda, amet quas his et.</p>
           <p class="c-text">Lorem ipsum dolor sit amet, amet animal mediocritatem pro id, eum alia dicta ex, tale vocibus signiferumque id usu. In augue putent percipitur nec, pri cu dicant noluisse evertitur. Suas lucilius accusamus et usu, pri ex possit voluptaria. Vix timeam nostrud persecuti eu, mea ne malis inermis dolores. Erant accusam ne vix.</p>
         </section>
         <section class="l-flex-row-e">
-          <figure class="l-g-1-2-e c-article__figure"><img src="images/article/art-3-normal.jpeg">
+          <figure class="l-g-1-2-e c-article__figure-e"><img src="images/article/art-3-normal.jpeg">
             <figcaption class="c-article__caption-abs">An porro vocent est. Malorum phaedrum oportere ad quo.</figcaption>
           </figure>
           <div class="l-g-2-2-e">
-            <p class="c-text">Ad mei nostro possim adipisci. <span class='c-underline-2'>Sanctus postulant euripidis ne nec</span>, vel esse maluisset at. Veniam vidisse torquatos eu vim. Doming regione abhorreant usu et, ut etiam erroribus mel. Eam ea decore facilisis qualisque, nam viris utroque invidunt eu. Nullam menandri adipisci ei est, pro at habeo dicunt appareat.</p>
-            <p class="c-text">Animal percipit et vim, fierent inimicus an usu. Ea sed civibus repudiare. Verterem abhorreant voluptatibus nam et, iriure eleifend consetetur ad vel. Ne mei congue moderatius.Eam ei sale probo abhorreant, altera eripuit tincidunt vix an.</p>
+            <p class="c-text">Ad mei nostro possim adipisci. <span class='c-underline-2'>Sanctus postulant euripidis ne nec</span>, vel esse maluisset at. Veniam vidisse torquatos eu vim. Doming regione abhorreant usu et, ut etiam erroribus mel. Eam ea decore facilisis qualisque, nam viris utroque invidunt eu. Nullam menandri adipisci ei est.</p>
+            <p class="c-text">Animal percipit et vim, fierent inimicus an usu. Ea sed civibus repudiare. Verterem abhorreant voluptatibus nam et, iriure eleifend consetetur ad vel. Ne mei congue moderatius.Eam ei sale probo abhorreant.</p>
             <p class="c-text">Animal percipit et vim, fierent inimicus an usu. Ea sed civibus repudiare, vix veniam persequeris id, ex eos novum dolore. Verterem abhorreant voluptatibus nam et, iriure eleifend consetetur ad vel. Ne mei congue moderatius.Eam ei sale probo abhorreant, altera eripuit tincidunt vix an.</p>
           </div>
         </section>
@@ -86,7 +100,7 @@
       </div>
     </article>
     <footer class="c-page__footer"></footer>
-    <div class="is-loading" id="js-page-load"></div>
+    <div class="c-page-is-loading" id="js-page-load"></div>
     <div class="c-modal" id="js-modal"></div>
     <script src="js/TweenMax.min.js"></script>
     <script src="js/onload.js"></script>

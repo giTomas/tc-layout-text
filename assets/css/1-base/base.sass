@@ -13,16 +13,18 @@ body
   // font-family: 'Prociono', serif
   line-height: $base-line-height
   // font-size: $base-font-size
-  color: $primary-color
+  background-color: $color-background
+  color: $color-text-primary
   // text-rendering: geometricPrecision
   text-rendering: optimizeLegibility
   //default
   // font-kerning: auto
   // font-variant-numeric: oldstyle-nums
-  font-size: 16px
+  font-size: 100%
   // position: relative
 
-main
+
+// main
   background-color: rgba(#F0DC9F, 0.2)
   padding-top: ($vertical-rhytm * 2)
 
@@ -40,6 +42,10 @@ p
   font-family: 'Gentium Basic', serif
   margin-bottom: $vertical-rhytm
 
+h1, h2, h3, h4, h5, h6, p, a, span
+  &::selection
+    background: $color-header
+
 img
   width: 100%
   object-fit: contain
@@ -51,3 +57,10 @@ hr
   background-color: #333
   background-image: linear-gradient(to right, #ccc, #333, #ccc)
   margin-bottom: $vertical-rhytm * 3
+
+a
+  text-decoration: none
+  color: $color-text-primary
+  &:focus,
+  &:active
+    outline: none
