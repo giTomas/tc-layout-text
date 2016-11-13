@@ -8,12 +8,12 @@
     left: 0
     background-color: $color-header
     z-index: 99
-    // border-bottom: 1px solid rgba(black, 0.5)
     box-shadow: 0 0 5px darken($color-header, 30%)
 
     &-background
       height: calc(#{$font-size-base} * #{$base-line-height})
-
+      background-color: $color-header
+      
   &__title
     font-size: $font-size-base
     font-variant: small-caps
@@ -22,9 +22,8 @@
   &__nav
 
   &__link
-    // font-size: $font-size-mini
     padding-left: ($padding-elements / 2)
-    letter-spacing: 0.02em
+    // letter-spacing: 0.02em
     transition: $transition-basic
     &:hover
       color: $color-text-secondary

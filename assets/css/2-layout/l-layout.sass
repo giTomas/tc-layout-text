@@ -25,6 +25,11 @@
     @media(max-width: 959px)
       flex-wrap: wrap
 
+  &-g-2-2
+    max-width: 593.376px
+    max-width: 61.81%
+    max-width: 37.086rem
+
 .l-1-2
   width: 50%
   @media(max-width: 959px)
@@ -38,14 +43,14 @@
   @media(max-width: 959px)
     padding-left: 0
 
-.l-g-1-2
+//.l-g-1-2
   // width: 61.8%
   width: 593.28px
   float: left
   @media(max-width: 959px)
     width: 100%
 
-.l-g-2-2
+//.l-g-2-2
   width: 38.19%
   max-width: 593.28px
   // float: right
@@ -53,7 +58,7 @@
     width: 100%
 
 .l-container
-  width: calc(960px + #{$padding-container} * 2)
+  max-width: calc(960px + #{$padding-container} * 2)
   // max-width: calc(60rem + #{$padding-container})
   margin: 0 auto
   padding: 0 $padding-container
@@ -70,24 +75,7 @@
 
 .l-g-1-2-e
   // width: 61.8%
-  margin-left: -366.62px
-  margin-right: $vertical-rhytm
   // margin-bottom: $vertical-rhytm / 5
-  width: calc(593.28px - #{vertical-rhytm / 2})
-  float: left
+  width: calc(593.28px - #{$vertical-rhytm/2})
   @media(max-width: 959px)
     width: 100%
-
-.c-article__caption-abs
-  padding-top: $vertical-rhytm / 6
-  color: $color-text-light
-  font-size: $font-size-mini
-  letter-spacing: 0.006em
-  font-family: 'Oswald', sans-serif
-  position: absolute
-  max-width: 366.624px
-
-.c-article__figure-e
-  cursor: zoom-in
-  @media(max-width: 959px)
-    padding-bottom: $vertical-rhytm

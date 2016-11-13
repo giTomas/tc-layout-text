@@ -36,24 +36,23 @@ var Navigation = {
   },
   //animations
   animScrollUp: function animScrollUp() {
-    TweenLite.to(this.dom.nav, 0.6, { ease: Power3.easeOut, boxShadow: "0px 0px 8px rgba(0, 0, 0, 0.6)", y: 0, force3D: true });
+    TweenLite.to(this.dom.nav, 0.6, { ease: Power3.easeOut, boxShadow: "0px 0px 8px rgba(0, 0, 0, 0.6)", y: 0, opacity: 1, force3D: true });
   },
   animScrollDown: function animScrollDown(height) {
-    TweenLite.to(this.dom.nav, 0.6, { ease: Power3.easeIn, boxShadow: "0px 0px 8px rgba(0, 0, 0, 0)", y: -height, force3D: true });
+    TweenLite.to(this.dom.nav, 0.6, { ease: Power3.easeIn, boxShadow: "0px 0px 8px rgba(0, 0, 0, 0)", y: -height, opacity: 0.1, force3D: true });
   },
   animFadeIcon: function animFadeIcon(el1, el2) {
-    this.config.tl.to(el1, 0.22, { ease: Power3.easeIn, opacity: 0, scale: 0, display: "none" })
-                  .to(el2, 0.22, { ease: Power3.easeOut, opacity: 1, scale: 1, display: "block" });
+    this.config.tl.to(el1, 0.22, { ease: Power3.easeIn, opacity: 0, scale: 0, display: "none" }).to(el2, 0.22, { ease: Power3.easeOut, opacity: 1, scale: 1, display: "block" });
   },
-  animOpenMenu: function animOpenMenu() {
-    TweenLite.set(this.dom.menu, { display: 'flex', delay: 0.35 });
+  animMenu: function animMenu(prop, value) {
+    TweenLite.set(this.dom.menu, { prop: value, delay: 0.35 });
   },
   animCloseMenu: function animCloseMenu() {
     TweenLite.set(this.dom.menu, { clearProps: "all", delay: 0.35 });
   },
   hasScrolled: function hasScrolled() {
     //fn config
-    var wScroll = window.scrollY; 
+    var wScroll = window.scrollY;
     var scrollNotEnough = Math.abs(this.config.lastScrollTop - wScroll) <= this.config.delta;
     var height = this.getHeight();
     var scrollUp = wScroll < this.config.lastScrollTop;
@@ -80,15 +79,17 @@ var Navigation = {
     this.config.didScroll = true;
   },
   openHandler: function openHandler() {
+    console.log('open');
     this.animFadeIcon(this.dom.navOpen, this.dom.navClose);
-    this.animOpenMenu();
+    this.animMenu(display, 'flex');
   },
   closeHandler: function closeHandler() {
+    console.log('close');
     this.animFadeIcon(this.dom.navClose, this.dom.navOpen);
-    this.animCloseMenu();
+    this.animMenu(clearProps, 'all');
   },
   attachListener: function attachListener(el, handler) {
-    var ev = arguments.length <= 2 || arguments[2] === undefined ? 'click' : arguments[2];
+    var ev = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'click';
 
     el.addEventListener(ev, handler, false);
   },

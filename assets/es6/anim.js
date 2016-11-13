@@ -6,7 +6,7 @@ function show_modal(modal, src){
   src.classList.add('member-is-clicked');
 
   tl.to(modal, 0.1, {display: 'block'})
-    .to(modal, 0.5, {backgroundColor: 'rgba(128, 128, 128, 0.9)'} )
+    .to(modal, 0.5, {backgroundColor: 'rgba(250, 250, 250, 0.9)'} )
     //.to(document.getElementById('js-profile'), 0.6, { left: '50%', autoAlpha: 1, force3D: true, ease: Power1.easeOut});
     .to(profile, 0.5, { left: '50%', force3D: true, ease: Power1.easeOut}, '-=0.1')
     .to(profile, 0.5, { autoAlpha: 1, ease: Power1.easeOut}, '-=0.4');
@@ -21,7 +21,9 @@ function show_modal(modal, src){
       .to(modal, 0, {clearProps: 'all'});
 
   setTimeout(()=> src.classList.remove('member-is-clicked'), 900);
-  return close.removeEventListener('click', closeHandler);
+
+  // return close.removeEventListener('click', closeHandler);
+  close.removeEventListener('click', closeHandler);
   };
 
   close.addEventListener('click', closeHandler, false);
